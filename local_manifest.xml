@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-10.2" />
-  <project name="CyanogenMod/android_device_samsung_hercules" path="device/samsung/hercules" remote="github" revision="cm-10.2" />
   <project name="CyanogenMod/android_device_samsung_skyrocket" path="device/samsung/skyrocket" remote="github" revision="cm-10.2" />
-  <project name="CyanogenMod/android_device_samsung_celox-common" path="device/samsung/celox-common" remote="github" revision="cm-10.2" />
-  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="github" revision="cm-10.2" />
-  <project name="CyanogenMod/android_device_samsung_msm8660-common" path="device/samsung/msm8660-common" remote="github" revision="cm-10.2" />
-  <project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" remote="github" revision="cm-10.2" />
-</manifest>
+  </manifest>
