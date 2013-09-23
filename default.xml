@@ -8,6 +8,13 @@
   <remote  name="github"
            fetch=".."
            review="review.cyanogenmod.org" />
+             
+  <remote name="bb"
+           fetch="https://bitbucket.org/" />
+           
+  <remote  name="gh"
+           fetch="git://github.com/" />
+
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
@@ -17,7 +24,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="soupy031/android_build" remote="github" revision="cm-10.2" groups="pdk" >
+  <project path="build" name="CyanogenMod/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -237,14 +244,14 @@
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" groups="pdk" />
   <project path="external/zxing" name="CyanogenMod/android_external_zxing" />
   <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" remote="github" revision="cm-10.2" />
+  <project path="frameworks/base" name="sgt7/android_frameworks_base" />
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="CyanogenMod/android_frameworks_compile_mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="CyanogenMod/android_frameworks_compile_slang" groups="pdk" />
   <project path="frameworks/ex" name="CyanogenMod/android_frameworks_ex" />
   <project path="frameworks/mff" name="CyanogenMod/android_frameworks_mff" />
   <project path="frameworks/ml" name="CyanogenMod/android_frameworks_ml" />
-  <project path="frameworks/native" name="soupy031/android_frameworks_native" remote="github" revision="jb3" groups="pdk" />
+  <project path="frameworks/native" name="CyanogenMod/android_frameworks_native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="CyanogenMod/android_frameworks_opt_calendar" />
   <project path="frameworks/opt/carddav" name="CyanogenMod/android_frameworks_opt_carddav" />
   <project path="frameworks/opt/colorpicker" name="CyanogenMod/android_frameworks_opt_colorpicker" />
@@ -292,7 +299,6 @@
   <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
   <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" />
-  <project path="kernel/samsung/msm8660-common" name="soupy031/HERC-KERNELS" remote="github" revision="uber-jb43" />
   <project path="libcore" name="CyanogenMod/android_libcore" />
   <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" remote="aosp" revision="refs/tags/android-4.3_r3" />
@@ -318,7 +324,6 @@
   <project path="packages/apps/Exchange" name="CyanogenMod/android_packages_apps_Exchange" />
   <project path="packages/apps/Focal" name="CyanogenMod/android_packages_apps_Focal" />
   <project path="packages/apps/Gallery2" name="CyanogenMod/android_packages_apps_Gallery2" />
-  <project path="packages/apps/HALO" name="UltimatumKang/HALO" remote="github" revision="master" />
   <project path="packages/apps/HTMLViewer" name="CyanogenMod/android_packages_apps_HTMLViewer" />
   <project path="packages/apps/KeyChain" name="CyanogenMod/android_packages_apps_KeyChain" />
   <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" />
@@ -332,7 +337,6 @@
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
   <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
   <project path="packages/apps/Settings" name="sgt7/android_packages_apps_Settings" />
-  <project path="packages/apps/Settings" name="ChameleonOS/android_packages_apps_Settings" remote="github" revision="jellybean-mr2.1" />
   <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" />
@@ -340,7 +344,6 @@
   <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
   <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" />
   <project path="packages/apps/Trebuchet" name="sgt7/android_packages_apps_Trebuchet" />
-  <project path="packages/apps/VideoEditor" name="CyanogenMod/android_packages_apps_VideoEditor" />
   <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
   <project path="packages/apps/VoicePlus" name="CyanogenMod/android_packages_apps_VoicePlus" />
   <project path="packages/experimental" name="CyanogenMod/android_packages_experimental" />
@@ -423,4 +426,13 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
+
+  <!--Hercules Requirements--> 
+  <project path="prebuilts/gcc/linux-x86/arm/Arm-Cortex_A9-Gnueabi-Linaro-4.8" name="soupy031/LINARO" remote="gh" revision="master" />
+  <project path="kernel/samsung/msm8660-common" name="soupy031/HERC-KERNELS" remote="gh" revision="aamod" /> 
+  <project path="device/samsung/hercules" name="CyanogenMod/android_device_samsung_hercules" remote="github" revision="cm-10.2" /> 
+  <project path="device/samsung/celox-common" name="CyanogenMod/android_device_samsung_celox-common" remote="github" revision="cm-10.2" /> 
+  <project path="device/samsung/msm8660-common" name="Cl3Kener/awesome_device_samsung_msm8660-common" remote="bb" revision="cm-10.2" /> 
+  <project path="device/samsung/qcom-common" name="CyanogenMod/android_device_samsung_qcom-common" remote="github" revision="cm-10.2" />  
+  
 </manifest>
